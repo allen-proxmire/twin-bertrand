@@ -84,7 +84,6 @@ See [`results/README.md`](results/README.md) for the standalone markdown reports
 
 1. **Unconditional proof of TPB.** Conjecturally follows from Hardy–Littlewood (see PG II §5). An unconditional proof likely needs a sieve-theoretic adaptation of the Maynard multi-dimensional sieve to the dyadic short-interval regime.
 2. **Asymptotic exponent.** Does the twin-gap exponent $\beta$ converge exactly to 2? Needs data past $10^{11}$.
-3. **OEIS A186312.** Comment that (11, 59, 101, 149, 179, …) is twin-Ramanujan sequence.
 
 ## Citation
 
