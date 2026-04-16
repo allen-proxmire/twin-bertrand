@@ -16,13 +16,7 @@ $$\pi_2(2x) - \pi_2(x) \ge 1 \qquad \text{for all } x \ge 11$$
 
 where
 
-
-
-\[
-\pi_2(x) = \#\{\,p \le x : p,\; p+2 \in \mathbb{P}\,\}
-\]
-
-
+$$\pi_2(2x)$$ - #{ 𝑝≤𝑥:𝑝 and 𝑝+2 are both prime }
 
 is the twin-prime counting function. This asserts that every dyadic interval $(x, 2x]$ past $x = 11$ contains at least one twin prime.
 Equivalent formulations:
