@@ -392,13 +392,13 @@ $10^9$ & $6\,030$ & $4\,289\,385\,521$ & $491.93$ & $12.258$ \\
 \section{A Refined Envelope Conjecture}\label{sec:envelope}
 
 For each constellation we compute $\sup(r_j-1)$ over tails
-$P^{\mathcal{C}}_j>T_\min$ at
-$T_\min\in\{10^2,10^3,10^5,10^7,10^9\}$:
+$P^{\mathcal{C}}_j>T_{\min}$ at
+$T_{\min}\in\{10^2,10^3,10^5,10^7,10^9\}$:
 
 \begin{center}
 \begin{tabular}{lrrr}
 \toprule
-$T_\min$ & twin $\sup(r-1)$ & cousin $\sup(r-1)$ & sexy $\sup(r-1)$ \\
+$T_{\min}$ & twin $\sup(r-1)$ & cousin $\sup(r-1)$ & sexy $\sup(r-1)$ \\
 \midrule
 $10^2$ & $2.80\times10^{-1}$ & $2.83\times10^{-1}$ & $2.24\times10^{-1}$ \\
 $10^3$ & $8.19\times10^{-2}$ & $1.10\times10^{-1}$ & $5.16\times10^{-2}$ \\
@@ -415,7 +415,7 @@ least-squares fit of the log-linear form
 \log\!\big((r_j-1)T_j\big)
 =\log C_\mathcal{C}+\delta_\mathcal{C}\log\log T_j
 \]
-on the five $T_\min$ points yields:
+on the five $T_{\min}$ points yields:
 
 \begin{center}
 \begin{tabular}{lrrr}
@@ -497,6 +497,25 @@ asymptotic exponent is $\beta=2$ (Hardy--Littlewood), our observations
 are consistent with a slow finite-size convergence whose pace is
 controlled by the overshoot factor
 $\Omega$.
+
+A second, independent window on the same convergence comes from the
+\emph{doubled-twin shadow} introduced in PG~II (its section on the
+$\Delta x$ structure and the geometry of doubled twins). Placing the
+doubled twins $2T_k$ on a prime-rank axis, PG~II finds that the
+macro-slope of the resulting point set obeys
+\[
+   \mathrm{slope}=\frac{C_2\,\log(2T)}{(\log T)^2},
+   \qquad C_2=\tfrac12 C_H,
+\]
+whose leading constant is half the Factor-Skyline twin coverage
+constant $C_H=2C_2$ (Theorem~4.7a of the Factor Skyline foundation
+paper, which identifies $C_H$ with the Hardy--Littlewood singular
+series for the twin pattern). This refined $1/\log$ law is confirmed
+empirically to $1$--$2\%$ across five decades of $T_k$, and its slow
+downward drift is the slope counterpart of the upward $\beta$ drift
+tabulated above: both measure the same finite-size approach to the
+Hardy--Littlewood asymptotics, from the density side here and from the
+extreme-gap side there.
 
 \subsection{Overshoot growth law}
 
@@ -608,7 +627,14 @@ which is strictly beyond current sieve-theoretic capabilities
 (bounded-gaps results of Zhang, Maynard, and Polymath8 give such
 short-interval existence only at some scales, not all). We expect
 that the Maynard multi-dimensional sieve, adapted to dyadic
-windows, is the natural apparatus for an attack on GBP.
+windows, is the natural apparatus for an attack on GBP. Finally, the
+$\Delta x$ construction of PG~II generalizes to any admissible
+constellation $\mathcal{C}$ via
+$\Delta x^{\mathcal{C}}_k=\pi(2P^{\mathcal{C}}_{k+1})-\pi(2P^{\mathcal{C}}_k)$,
+and the $G^{\mathcal{C}}$-driven overdispersion and scale-collapse
+phenomena observed there for twins are expected to persist for all
+constellations, with the governing constant becoming the singular
+series $\mathfrak{S}(\mathcal{C})$.
 
 The apparent universality of the envelope across constellations, and
 the unified overshoot law, suggest that the Generalized Bertrand
