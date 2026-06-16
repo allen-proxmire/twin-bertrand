@@ -2,7 +2,7 @@
 
 *The single remaining hinge of the QM-amplitude reading of the prime escape. Analytic, not computational. This file is the tracked parking spot for all future work on it.*
 
-**Status:** OPEN. Frontier: Montgomery pair-correlation / Bogomolny–Keating. Not settleable by sieve-scale computation.
+**Status:** RESOLVED (heuristic-structural, 2026-06-16) → **Landing Pad A: CLOSED-NEGATIVE for single-amplitude `|A|²`** (see §9). Rigorous version remains open (Bogomolny–Keating). One successor opened: the two-particle mixed-state density-matrix reading (§9).
 **Parent:** `FS_TB_QM_Amplitude_Memo.md` (Appendix A) · ED `Paper_FiniteMemoryCeiling_Primes.md` §4.5 · `FS_TB_Bridge.md`.
 **Predecessor:** `OPEN_QUESTION_FS_TB_QM_AMP_01` — closed on its decidable axes by `scripts/pg_qm_amplitude_probe.py` (verdict `results/qm_amplitude_probe.md`).
 
@@ -69,4 +69,20 @@ Routing is fixed in advance so the resolution integrates deterministically and w
 
 ---
 
-*The decidable axes are closed; the analogy survives them; what remains is whether the escape is a single amplitude or an irreducible pair. That is an analytic question on the Montgomery–Bogomolny–Keating frontier, and it is parked here until it is worked.*
+## 9. Resolution — routed to Landing Pad A *(heuristic-structural, 2026-06-16)*
+
+**9.1 The reformulation.** "Single-amplitude `|A|²`" means the zero-pair kernel `K(ρ,ρ')` is **separable / rank-1**: `K(ρ,ρ') = c_ρ c̄_{ρ'}`. (Note `|A|²` of *any* single sum `A = Σ_ρ c_ρ(·)` is already a double sum over pairs — so "bilinear" alone does not settle it; **separability** does.) QM dictionary: rank-1 = a **pure** single-particle state `|ψ⟩⟨ψ|`; rank > 1 = a **mixed / two-particle** density matrix.
+
+**9.2 The argument.** With the standard heuristic `Λ(n) = 1 − Σ_ρ n^{ρ-1} − …`, the twin correlation `ψ₂(N) = Σ_{n≤N} Λ(n)Λ(n+2)` splits into a mean, single-zero (linear, `~√N`, *not* twin-specific) terms, and a pair term
+
+$$\sum_{\rho,\rho'} \sum_{n\le N} n^{\rho-1}(n+2)^{\rho'-1} \;\approx\; \sum_{\rho,\rho'} \frac{N^{\rho+\rho'-1}}{\rho+\rho'-1}.$$
+
+The pair-kernel `K(ρ,ρ') ∝ N^ρ N^{ρ'}/(ρ+ρ'−1)` fails to factor: the coupling `1/(ρ+ρ'−1)` is a **Hilbert kernel**, and the Hilbert matrix `1/(i+j−1)` is the classical **infinite-rank** positive operator (bounded, norm π, continuous spectrum `(0,π)`, never finite-rank). Via `1/(ρ+ρ'−1) = ∫_0^1 u^{ρ-1}u^{ρ'-1}\,du` the kernel is a *continuous superposition* of rank-1 pieces — a density matrix with continuous Schmidt spectrum.
+
+**9.3 Verdict (Pad A) + successor.** The twin escape is **irreducibly bilinear: no single-amplitude `|A|²` / no pure-state square** — the zero-pair kernel is non-separable (Hilbert / infinite-rank). Criterion (ii) is answered **NEGATIVE** for the single-amplitude form; the QM analogy is **form-only** at that level. The analogy moves up one floor to a well-defined object: the twin escape corresponds to a **two-particle mixed-state density matrix** `ρ(ρ,ρ') ∝ N^{ρ+ρ'}/(ρ+ρ'−1)` over zero-modes; its continuous Schmidt spectrum is the zero-pair "entanglement," and the parity-barrier-withheld information is the **relative phase across the pair**, not a single amplitude's phase. *Single primes ↔ pure-state amplitude (`ψ(x)−x`, `M(x)`); twin primes ↔ entangled two-particle density matrix.* This is the **one sanctioned successor** (it anchors to the Bogomolny–Keating form factor); pursuing it = connecting the kernel's Schmidt spectrum to the GUE pair correlation. It is the only direction the freeze now opens.
+
+**9.4 Rigor.** Heuristic-structural: the `Λ ≈ 1 − Σ_ρ n^{ρ-1}` expansion and the zero-sum / `n`-sum interchange are formal — the conjectural step of §A.4 above, rigorously the open Bogomolny–Keating program. The **rank argument is robust**: the heuristic corrections (the `(n+2)` expansion, off-diagonal form-factor terms) do not turn a Hilbert / non-separable kernel into a separable one, so the *direction* — non-rank-1, mixed not pure — stands even though the precise kernel is not a proven object. **Status: single-amplitude question CLOSED-NEGATIVE (heuristic); rigorous version OPEN.**
+
+---
+
+*The escape is not a single amplitude. Its zero-pair kernel is a Hilbert / infinite-rank operator — irreducibly bilinear — so the QM correspondent is a two-particle mixed-state density matrix, not a pure `|ψ|²`. Form-only at the single-amplitude level; the density-matrix reading is the open successor on the Montgomery–Bogomolny–Keating frontier.*
