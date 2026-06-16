@@ -236,6 +236,21 @@ $$\underbrace{\text{twin-prime conjecture}}_{\pi_2(x)\to\infty} \;\supset\; \und
 
 > **TB is true-but-unprovable-by-these-means for a structural reason: the entire content of TB beyond the FS skeleton is the ≲0.26-bit escape gap.** Factor Skyline measures the height of the wall; Twin Bertrand is what lies on the far side of it.
 
+### 5.5. The bounded-gaps theorem: the parity floor, and why it is the same wall
+
+The one rung of the hierarchy that has actually been *climbed* is its weakest — bounded gaps — and the precise way it was climbed sharpens exactly where TB's wall sits.
+
+**The pipeline.** GPY (2005) reduced bounded gaps to a *level-of-distribution* input `θ` (control of primes in arithmetic progressions to modulus `x^θ`); Bombieri–Vinogradov gives `θ = ½`, just short of what they needed. Zhang (2013) pushed `θ` a hair past `½` for smooth moduli → bounded gaps *exist* (`≤ 7×10⁷`). Maynard–Tao (2013) replaced the sieve with a multidimensional one efficient enough to need **only** Bombieri–Vinogradov (`θ = ½`, a theorem) → gaps `≤ 600`, and gaps for `m` primes at once. Polymath8b optimized this to **246 unconditional**, **12 under Elliott–Halberstam (EH)**, **6 under generalized EH**.
+
+**Two barriers, not one.** The descent rides a *soft* barrier and stops at a *hard* one — and conflating them is the standard mistake:
+
+- The **Bombieri–Vinogradov / level-of-distribution barrier** (`θ`) is *soft*: dented by Zhang, conjecturally removable (EH pushes `θ → 1`). Improving `θ` lowers the bound (`600 → 246 → … → 6`). The unconditional **246 is contingent** — it reflects current distribution knowledge, not a wall.
+- The **parity barrier** (Selberg's parity problem) is *hard* and untouched. Even granting the strongest distribution conjecture (GEH, `θ → 1`), the method floors at **6 and can never reach 2**. *That* floor — the `6 → 2` step — is the parity barrier, the same `≲0.26`-bit escape wall this note is about. Zhang cracked the **BV** barrier, **not** the parity barrier; the two must not be merged. So the real finite-sieve wall is **6**, not 246: 246 is where current distribution knowledge sits, while `6 → 2` is the part no amount of distribution can buy.
+
+**Why it is the same wall — in the template/escape language of §2.** The sieve proves *"infinitely often a bounded window contains two primes"* but **never locates which two**: it counts weighted admissible tuples and shows the average tuple carries more than one escape, without identifying the escaping positions. That is exactly **candidate existence without individuated simultaneous escape** — the template hands you a bounded cluster of twin-open candidates and certifies that `≥ 2` of them escape; the parity barrier is precisely what forbids resolving *which adjacent pair* escapes, i.e. pinning a located twin at distance 2. Bounded gaps is therefore the *proving-side shadow* of TB's open part: the method reaches the **cluster** (one object, `≥ 2` escapes inside) and cannot **individuate** it into a located twin. The `6 → 2` step is the individuation the escape layer withholds. *(This "cannot individuate the pair" reading — the twin as one un-resolved pattern sampled at two offsets, the parity barrier as the individuation block — is developed in `OPEN_QUESTION_FS_TB_QM_AMP_02_Bilinearity.md` §9.)*
+
+The numbers (`600, 246, 12, 6`) are the published Maynard / Polymath8b records; the "floor 6 under GEH, never 2" statement is the standard parity-problem reading. Nothing here is new number theory — it grounds this note's parity-barrier claim in a hard theorem, and locates TB's open content precisely at the same `6 → 2` individuation step.
+
 ---
 
 ## Appendix: Provenance of the numbers
